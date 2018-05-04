@@ -1,10 +1,28 @@
 {
   "name": "hey-team-frontend",
   "version": "0.1.0",
+  "description": "Hey-Team Slack App Frontend",
+  "main": "hey-team-frontend/src",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lambda-School-Labs/slack-bot.git"
+  },
+  "contributors": [
+    "Jason Campbell",
+    "Manisha Lal",
+    "Christy Crites",
+    "Wesley Harvey"
+  ],
   "private": true,
+  "proxy": {
+    "/api/*": {
+      "target": "http://localhost:5000"
+    }
+  },
   "dependencies": {
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
+    "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.4"
   },
   "scripts": {
