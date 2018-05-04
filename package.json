@@ -1,0 +1,42 @@
+{
+  "name": "slack-bot",
+  "version": "0.1.0",
+  "description": "Hey-Team Slack App Server",
+  "main": "hey-team-server",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lambda-School-Labs/slack-bot"
+  },
+  "contributors": [
+    "Jason Campbell",
+    "Manisha Lal",
+    "Christy Crites",
+    "Wesley Harvey"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": "9.11.1",
+    "yarn": "1.6.x"
+  },
+  "scripts": {
+    "server": "node hey-team-server",
+    "dev-server": "nodemon hey-team-server",
+    "frontend": "cd hey-team-frontend && yarn start",
+    "dev": "concurrently --kill-others-on-fail \"yarn dev-server\" \"yarn frontend\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd hey-team-frontend && { yarn && yarn build; }"
+  },
+  "bugs": {
+    "url": "https://https://github.com/Lambda-School-Labs/slack-bot"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongodb": "^3.0.7",
+    "mongoose": "^5.0.17"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "nodemon": "^1.17.3"
+  }
+}
