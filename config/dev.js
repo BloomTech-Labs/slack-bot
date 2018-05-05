@@ -13,8 +13,8 @@
  */
 
 module.exports = {
-    googleClientID: process.env.GOOGLE_DEV_CLIENT_ID,
+    googleClientID:     process.env.GOOGLE_DEV_CLIENT_ID,
     googleClientSecret: process.env.GOOGLE_DEV_CLIENT_SECRET,
-    googleCallbackURI: process.env.GOOGLE_DEV_CALLBACK_URI,
-    mongoURI: process.env.MONGODB_DEV_URI
+    googleCallbackURI:  process.env.GOOGLE_DEV_CALLBACK_URI,
+    mongoURI:           process.env.MONGODB_DEV_URI
 }

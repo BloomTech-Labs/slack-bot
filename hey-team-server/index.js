@@ -3,7 +3,7 @@
    ==================================
    Project: Hey-Team Slack App
    Created: 2018-05-04
-   Version: 0.1.0
+   Version: 0.1.1
    About:   Main server file
    Notes:   
    -----------------------------------
@@ -12,7 +12,7 @@
 require('dotenv').config();
 
 const KEYS = require('../config/keys');
-const PORT = process.env.Port || process.env.DEV_PORT;
+const PORT = process.env.PORT || process.env.DEV_PORT;
 
 const express = require('express');
 const app = express();
