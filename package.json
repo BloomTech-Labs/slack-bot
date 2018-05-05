@@ -20,7 +20,7 @@
     "yarn": "1.6.x"
   },
   "scripts": {
-    "server": "node hey-team-server",
+    "start": "node hey-team-server",
     "dev-server": "nodemon hey-team-server",
     "frontend": "cd hey-team-frontend && yarn start",
     "dev": "concurrently --kill-others-on-fail \"yarn dev-server\" \"yarn frontend\"",
@@ -31,6 +31,7 @@
     "url": "https://https://github.com/Lambda-School-Labs/slack-bot"
   },
   "dependencies": {
+    "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "mongodb": "^3.0.7",
     "mongoose": "^5.0.17"
