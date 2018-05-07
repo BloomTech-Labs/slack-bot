@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+
+import { Route } from 'react-router-dom';
+import Homepage from './components/Homepage';
+import About from './components/About';
+
+
+// import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
+      <div>
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to HeyTeam Slack App</h1>
-        </header>
-        <p className="App-intro">
-          This will be HeyTeam Slack App
-        </p>
+        
+        
+          <Route path='/' exact component={Homepage} />
+          <Route path='/about' component={About} />
+        </div>
       </div>
     );
   }
