@@ -6,4 +6,4 @@ class Billing extends Component {
   }
 }
 
-export default HomePage;
+export default Billing;
