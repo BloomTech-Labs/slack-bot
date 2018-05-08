@@ -1,6 +1,10 @@
+require('dotenv').config();
+
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+
+import { Security, ImplicitCallback } from '@okta/okta-react';
 
 class App extends Component {
   render() {
