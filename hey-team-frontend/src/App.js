@@ -12,9 +12,11 @@ import ConversationList from "./components/ConversationList";
 import ConversationListEmp from "./components/ConversationListEmp";
 import Navigation from "./components/Navigation";
 
-
 // import logo from './logo.svg';
 import './App.css';
+
+import config from './.config';
+console.log('CONFIG=>', config);
 
 class App extends Component {
   render() {
