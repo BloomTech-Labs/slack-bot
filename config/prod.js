@@ -3,7 +3,8 @@
    ====================================
    Project: Hey-Team Slack App
    Created: 2018-05-04
-   Version: 0.1.0
+   Updated: 2018-05-08
+   Version: 0.2.0
    Team: Jason Campbell, Manisha Lal,
          Christy Crites, Wesley Harvey
    About: Loads development environment
@@ -13,8 +14,8 @@
  */
 
 module.exports = {
-    googleClientID:     process.env.GOOGLE_CLIENT_ID,
-    googleClientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    googleCallbackURI:  process.env.GOOGLE_CALLBACK_URI,
-    mongoURI:           process.env.MONGODB_URI
+  okta_oidc_issuer: `https://${process.env.OKTA_ORG_URI}/oauth2/default`,
+  okta_client_id: `process.env.OKTA_CLIENT_ID`,
+  okta_redirect_uri: `${process.env.PROD_SERVER_URL}:{process.env.PORT}/implicit/callback`
+  okta_scope: 'openid profile email'
 }
