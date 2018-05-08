@@ -4,6 +4,12 @@ import './App.css';
 
 import { Security, ImplicitCallback } from '@okta/okta-react';
 
+const config = {
+  issuer: 'https://dev-262012.oktapreview.com/oauth2/default',
+  redirect_uri: window.location.origin + '/implicit/callback',
+  client_id: '0oaexy0vsuGGEK8vi0h7'
+}
+
 class App extends Component {
   render() {
     return (
