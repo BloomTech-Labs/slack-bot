@@ -16,6 +16,7 @@
   "private": true,
   "proxy": "http://localhost:3000",
   "dependencies": {
+    "@okta/okta-react": "^1.0.1",
     "react": "^16.3.2",
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.3.2",
