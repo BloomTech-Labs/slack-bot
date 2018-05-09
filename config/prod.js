@@ -16,6 +16,6 @@
 module.exports = {
   okta_oidc_issuer: `https://${process.env.OKTA_ORG_URI}/oauth2/default`,
   okta_client_id: `process.env.OKTA_CLIENT_ID`,
-  okta_redirect_uri: `${process.env.PROD_SERVER_URL}:{process.env.PORT}/implicit/callback`
+  okta_redirect_uri: `${process.env.PROD_SERVER_URL}:{process.env.PORT}/implicit/callback`,
   okta_scope: 'openid profile email'
 }
