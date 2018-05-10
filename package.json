@@ -39,6 +39,7 @@
   },
   "devDependencies": {
     "concurrently": "^3.5.1",
+    "express-generator": "^4.16.0",
     "nodemon": "^1.17.3"
   }
 }
