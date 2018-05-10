@@ -14,7 +14,7 @@
     "Wesley Harvey"
   ],
   "private": true,
-  "proxy": "http://localhost:5000",
+  "proxy": "http://localhost:3001",
   "dependencies": {
     "@okta/okta-react": "^1.0.1",
     "react": "^16.3.2",
