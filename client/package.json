@@ -1,8 +1,8 @@
 {
-  "name": "hey-team-frontend",
+  "name": "client",
   "version": "0.1.0",
   "description": "Hey-Team Slack App Frontend",
-  "main": "hey-team-frontend/src",
+  "main": "client/src",
   "repository": {
     "type": "git",
     "url": "https://github.com/Lambda-School-Labs/slack-bot.git"
@@ -14,7 +14,7 @@
     "Wesley Harvey"
   ],
   "private": true,
-  "proxy": "http://localhost:3000",
+  "proxy": "http://localhost:5000",
   "dependencies": {
     "@okta/okta-react": "^1.0.1",
     "react": "^16.3.2",
