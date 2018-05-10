@@ -10,8 +10,8 @@
    -------------------------------------
  */
 export default {
-  url: "{openid profile email}",
-  issuer: "{https://dev-262012.oktapreview.com}/oauth2/default",
+  url: "https://dev-262012.oktapreview.com",
+  issuer: "https://dev-262012.oktapreview.com/oauth2/default",
   redirect_uri: window.location.origin + "/implicit/callback",
-  client_id: "{0oaey4kmdhcvKv7Dv0h7}"
+  client_id: "0oaey4kmdhcvKv7Dv0h7"
 };
