@@ -1,8 +1,9 @@
 /**
    ProfilePage.js
    ====================================================
-   CREATED: 2018-05-16
-   VERSION: 0.1.0
+   CREATED: 2018-05-15
+   UPDATED: 2018-05-15
+   VERSION: 0.2.0
    TEAM: Jason Campbell, Manisha Lal, Wesley Harvey
    ABOUT: Profile Page Component
    NOTES:
@@ -11,6 +12,9 @@
 
 import React from 'react';
 import { withAuth } from '@okta/okta-react';
+import { SecureRoute, ImplicitCallback } from "@okta/okta-react";
+import Conversations from "../Conversations";
+import ConversationList from "../ConversationList";
 
 export default withAuth(class ProfilePage extends React.Component {
   constructor(props){
@@ -32,13 +36,14 @@ export default withAuth(class ProfilePage extends React.Component {
     if(!this.state.user) return null;
     return (
       <section className="user-profile">
-        <h1>User Profile</h1>
-        <div>
+	<h1>User Profile</h1>
+	<div>
           <label>Name:</label>
           <span>{this.state.user.name}</span>
-        </div>
+          <SecureRoute path="/profile/conversations" component={Conversations} />
+          <SecureRoute path="/profile/conversations/conversationlist" component={ConversationList} />
+	</div>
       </section>
-
-    )
+    );
   }
 });
