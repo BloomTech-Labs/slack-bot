@@ -79,7 +79,7 @@ class App extends Component {
               <h1 className="App-title">Welcome to HeyTeam Slack App</h1>
             </header>
             <p className="App-intro">
-              This will be HeyTeam Slack App
+              This is HeyTeam Slack App
             </p>
 	  </div>
 	  <Route path='/' exact component={Home} />
