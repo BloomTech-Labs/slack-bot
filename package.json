@@ -23,7 +23,7 @@
     "start": "node server",
     "dev-server": "nodemon server",
     "client": "cd client && yarn start",
-    "dev": "concurrently --kill-others-on-fail \"yarn dev-server\" \"yarn client\"",
+    "dev": "concurrently --kill-others-on-fail \"DEBUG=server:main yarn dev-server\" \"yarn client\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd client && { yarn && yarn build; }"
   },
@@ -32,13 +32,17 @@
   },
   "dependencies": {
     "@okta/okta-sdk-nodejs": "^1.1.0",
+    "cookie-parser": "^1.4.3",
     "dotenv": "^5.0.1",
     "express": "^4.16.3",
+    "http-errors": "^1.6.3",
     "mongodb": "^3.0.7",
-    "mongoose": "^5.0.17"
+    "mongoose": "^5.0.17",
+    "morgan": "^1.9.0"
   },
   "devDependencies": {
     "concurrently": "^3.5.1",
+    "debug": "^3.1.0",
     "nodemon": "^1.17.3"
   }
 }

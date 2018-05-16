@@ -11,32 +11,30 @@
  */
 
 require('dotenv').config();
-
 const KEYS = require('../config/keys');
 const PORT = process.env.PORT || process.env.DEV_SERVER_PORT;
 
+const debug = require('debug')('server:main');
+debug('booting...');
+
 const express = require('express');
 const app = express();
+app.set('port', PORT);
+debug(`PORT set to ${app.get('port')}`);
+
 const createError = require('http-errors');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const usersRouter = require('./routes/users');
 
 app.use(logger('dev'));
-app.use(cookieParser);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use('/api/users', usersRouter);
-
-app.get('/api', (req, res) => {
-  res.set('Content-Type', 'application/json');
-  res.send('{"message": "Hey Team!  Hello from hey-team-server"}');
-});
+app.use(cookieParser);
 
 app.use((req, res, next) => {
   next(createError(404));
 });
-
 app.use((err, req, res, next) => {
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
@@ -44,9 +42,14 @@ app.use((err, req, res, next) => {
   res.render('error');
 });
 
-app.listen(PORT, () => {
-  console.error(`process ${process.pid}: listening on port ${PORT}`);
+app.get('/api', (req, res) => {
+  res.set('Content-Type', 'application/json');
+  res.send('{"message": "Hey Team!  Hello from hey-team-server"}');
 });
+
+app.use('/api/users', usersRouter);
+
+app.listen(PORT, () => debug(`Process ${process.pid}: Listening on port ${PORT}`));
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
