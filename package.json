@@ -20,12 +20,12 @@
     "yarn": "1.6.x"
   },
   "scripts": {
-    "start": "node hey-team-server",
-    "dev-server": "nodemon hey-team-server",
-    "frontend": "cd hey-team-frontend && yarn start",
-    "dev": "concurrently --kill-others-on-fail \"yarn dev-server\" \"yarn frontend\"",
+    "start": "node server",
+    "dev-server": "nodemon server",
+    "client": "cd client && yarn start",
+    "dev": "concurrently --kill-others-on-fail \"yarn dev-server\" \"yarn client\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd hey-team-frontend && { yarn && yarn build; }"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false cd client && { yarn && yarn build; }"
   },
   "bugs": {
     "url": "https://https://github.com/Lambda-School-Labs/slack-bot"
