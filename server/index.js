@@ -12,7 +12,7 @@
 require('dotenv').config();
 
 const KEYS = require('../config/keys');
-const PORT = process.env.PORT || process.env.DEV_PORT;
+const PORT = process.env.PORT || process.env.DEV_SERVER_PORT;
 
 const express = require('express');
 const app = express();
