@@ -1,8 +1,8 @@
 {
-  "name": "hey-team-frontend",
-  "version": "0.1.0",
-  "description": "Hey-Team Slack App Frontend",
-  "main": "hey-team-frontend/src",
+  "name": "Hey-Team-Client",
+  "version": "0.2.0",
+  "description": "Hey-Team Slack App Client Frontend",
+  "main": "client/src",
   "repository": {
     "type": "git",
     "url": "https://github.com/Lambda-School-Labs/slack-bot.git"

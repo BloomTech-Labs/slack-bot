@@ -1,8 +1,8 @@
 {
-  "name": "slack-bot",
-  "version": "0.1.0",
+  "name": "Hey-Team-Server",
+  "version": "0.2.0",
   "description": "Hey-Team Slack App Server",
-  "main": "hey-team-server",
+  "main": "server",
   "homepage": "",
   "repository": {
     "type": "git",
@@ -16,7 +16,7 @@
   ],
   "license": "MIT",
   "engines": {
-    "node": "9.11.1",
+    "node": "~9.11.x",
     "yarn": "1.6.x"
   },
   "scripts": {
