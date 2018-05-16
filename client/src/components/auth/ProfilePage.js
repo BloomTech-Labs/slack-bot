@@ -1,5 +1,8 @@
 import React from 'react';
 import { withAuth } from '@okta/okta-react';
+import { SecureRoute, ImplicitCallback } from "@okta/okta-react";
+import Conversations from "../Conversations";
+import ConversationList from "../ConversationList";
 
 export default withAuth(class ProfilePage extends React.Component {
   constructor(props){
@@ -19,15 +22,14 @@ export default withAuth(class ProfilePage extends React.Component {
 
   render() {
     if(!this.state.user) return null;
-    return (
-      <section className="user-profile">
+    return <section className="user-profile">
         <h1>User Profile</h1>
         <div>
           <label>Name:</label>
           <span>{this.state.user.name}</span>
+          <SecureRoute path="/profile/conversations" component={Conversations} />
+          <SecureRoute path="/profile/conversations/conversationlist" component={ConversationList} />
         </div>
-      </section>
-
-    )
+      </section>;
   }
 });
