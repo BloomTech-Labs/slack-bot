@@ -3,7 +3,8 @@
    ==================================
    Project: Hey-Team Slack App
    Created: 2018-05-04
-   Version: 0.1.1
+   Updated: 2018-05-16
+   Version: 0.2.0
    About:   Main server file
    Notes:   
    -----------------------------------

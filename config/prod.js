@@ -16,6 +16,6 @@
 module.exports = {
   client_id: process.env.OKTA_CLIENT_ID,
   issuer: `${process.env.OKTA_ORG_URI}/oauth2/default`,
-  redirect_uri: `https://${process.env.PROD_SERVER_URI}:${process.env.PORT}/authorization-code/callback`,
-  scope: process.env.OKTA_SCOPE,
+  redirect_uri: `https://${process.env.PROD_SERVER_URI}:${process.env.PORT}/implicit/callback`,
+  scope: process.env.OKTA_SCOPE
 }
