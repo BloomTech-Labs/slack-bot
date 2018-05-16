@@ -4,7 +4,7 @@
    Project: Hey-Team Slack App
    Created: 2018-05-04
    Updated: 2018-05-16
-   Version: 0.2.0
+   Version: 0.2.1
    About:   Main server file
    Notes:   
    -----------------------------------
@@ -19,6 +19,9 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+const users = require('./routes/users');
+app.use('/api/users', users);
 
 app.get('/api', (req, res) => {
   res.set('Content-Type', 'application/json');
