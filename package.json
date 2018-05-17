@@ -16,8 +16,8 @@
   ],
   "license": "MIT",
   "engines": {
-    "node": "~9.11.x",
-    "yarn": "1.6.x"
+    "node": "~10.x",
+    "yarn": "~1.6.x"
   },
   "scripts": {
     "start": "node server",
