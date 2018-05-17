@@ -4,7 +4,7 @@
    Project: Hey-Team Slack App
    Created: 2018-05-04
    Updated: 2018-05-17
-   Version: 0.3.1
+   Version: 0.3.2
    About:   Main server file
    Notes:   
    -----------------------------------
@@ -18,11 +18,9 @@ const debug = require('debug')('server:main');
 debug('booting...');
 
 const express = require('express');
-const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
 const app = express();
-app.use(cookieParser);
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
