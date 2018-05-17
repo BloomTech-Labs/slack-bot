@@ -49,7 +49,7 @@ app.get('/api', (req, res) => {
 
 app.use('/api/users', usersRouter);
 
-app.listen(PORT, () => debug(`Process ${process.pid}: Listening on port ${PORT}`));
+app.listen(PORT, () => console.log(`Process ${process.pid}: Listening on port ${PORT}`));
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));

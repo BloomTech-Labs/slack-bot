@@ -1,28 +1,40 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+/* .button {border-radius: 50%;}
+.button {
+    background-color: rgb(131, 137, 138); 
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+} */
+.btn-circle, .btn-circle-3d{
+  border-radius: 50% !important;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.btn-primary.btn-circle{
+  -webkit-box-shadow: 0px 0px 3px 1px #4e545a;
+  -moz-box-shadow:    0px 0px 3px 1px #4e545a;
+  box-shadow:         0px 0px 3px 1px #4e545a;
 }
 
-.App-title {
-  font-size: 1.5em;
+.btn-default.btn-circle{
+  -webkit-box-shadow: 04px 04px 6px 1px rgb(143, 138, 138);
+  -moz-box-shadow:    04px 04px 6px 1px rgb(143, 138, 138);
+  box-shadow:         04px 04px 6px 1px rgb(143, 138, 138);
 }
 
-.App-intro {
-  font-size: large;
+.search-bar {
+  margin: 100px;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.search-bar input {
+    width: 70%;
 }
