@@ -1,15 +1,26 @@
+/**
+   client/src/index.js
+   ====================================================
+   CREATED: 2018-05-15
+   VERSION: 0.2.0
+   TEAM: Jason Campbell, Manisha Lal, Wesley Harvey
+   ABOUT: Root file rendering the React client
+   NOTES:
+   ----------------------------------------------------
+ */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
-import './index.css';
-import App from './App';
+import { Security } from '@okta/okta-react';
 import registerServiceWorker from './registerServiceWorker';
-import { Security } from "@okta/okta-react";
 
-import config from "./app.config";
+import App from './App';
+import './index.css';
+import config from './client.config';
 
 function onAuthRequired({ history }) {
-  history.push("/login");
+  history.push('/login');
 }
 
 ReactDOM.render(
@@ -22,7 +33,8 @@ ReactDOM.render(
     >
       <App />
     </Security>
-  </Router>,
-  document.getElementById("root")
+  </Router>
+  , document.getElementById('root')
 );
+
 registerServiceWorker();
