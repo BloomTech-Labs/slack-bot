@@ -1,3 +1,15 @@
+/**
+   LoginForm.js
+   ====================================================
+   CREATED: 2018-05-16
+   VERSION: 0.1.0
+   TEAM: Jason Campbell, Manisha Lal, Wesley Harvey
+   ABOUT: The Login Form Component; used by Login Page
+   Component
+   NOTES:
+   ----------------------------------------------------
+ */
+
 import React from 'react';
 import OktaAuth from '@okta/okta-auth-js';
 import { withAuth } from '@okta/okta-react';
@@ -13,28 +25,32 @@ export default withAuth(class LoginForm extends React.Component {
     }
 
     this.oktaAuth = new OktaAuth({ url: props.baseUrl });
+
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleUsernameChange = this.handleUsernameChange.bind(this);
+    this.handlePasswordChange = this.handlePasswordChange.bind(this);
   }
 
-  handleSubmit= (e) => {
+  handleSubmit(e) {
     e.preventDefault();
     this.oktaAuth.signIn({
       username: this.state.username,
       password: this.state.password
     })
-      .then(res => this.setState({
-        sessionToken: res.sessionToken
-      }))
-      .catch(err => {
-        this.setState({error: err.message});
-        console.log(err.statusCode + ' error', err)
-      });
+	.then(res => this.setState({
+          sessionToken: res.sessionToken
+	}))
+	.catch(err => {
+          this.setState({error: err.message});
+          console.log(err.statusCode + ' error', err)
+	});
   }
 
-  handleUsernameChange= (e) => {
+  handleUsernameChange(e) {
     this.setState({ username: e.target.value });
   }
 
-  handlePasswordChange = (e) => {
+  handlePasswordChange(e) {
     this.setState({ password: e.target.value });
   }
 
@@ -45,8 +61,8 @@ export default withAuth(class LoginForm extends React.Component {
     }
 
     const errorMessage = this.state.error ? 
-	<span className="error-message">{this.state.error}</span> : 
-	null;
+			 <span className="error-message">{this.state.error}</span> : 
+			 null;
 
     return (
       <form onSubmit={this.handleSubmit}>
@@ -54,17 +70,17 @@ export default withAuth(class LoginForm extends React.Component {
         <div className="form-element">
           <label>Username:</label>
           <input
-            id="username" type="text"
-            value={this.state.username}
-            onChange={this.handleUsernameChange} />
+              id="username" type="text"
+              value={this.state.username}
+              onChange={this.handleUsernameChange} />
         </div>
 
         <div className="form-element">
           <label>Password:</label>
           <input
-            id="password" type="password"
-            value={this.state.password}
-            onChange={this.handlePasswordChange} />
+              id="password" type="password"
+              value={this.state.password}
+              onChange={this.handlePasswordChange} />
         </div>
         <input id="submit" type="submit" value="Submit" />
       </form>

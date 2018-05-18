@@ -1,7 +1,7 @@
 {
-  "name": "client",
-  "version": "0.1.0",
-  "description": "Hey-Team Slack App Frontend",
+  "name": "Hey-Team-Client",
+  "version": "0.2.0",
+  "description": "Hey-Team Slack App Client Frontend",
   "main": "client/src",
   "repository": {
     "type": "git",
@@ -14,13 +14,14 @@
     "Wesley Harvey"
   ],
   "private": true,
-  "proxy": "http://localhost:3001",
+  "proxy": "http://localhost:5000",
   "dependencies": {
     "@okta/okta-react": "^1.0.1",
+    "dotenv": "^5.0.1",
     "react": "^16.3.2",
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.3.2",
-    "react-router-bootstrap": "^0.24.4",
+    "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.4"
   },
