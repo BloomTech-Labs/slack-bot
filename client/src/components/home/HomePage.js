@@ -19,7 +19,9 @@ export default class HomePage extends React.Component {
         <Button href={'/billing'} bsStyle='success' bsSize="large">
           Buy!!
         </Button>
-      
+        <div></div>
+        <div></div>
+        <div></div>
       
       </div>
       );
