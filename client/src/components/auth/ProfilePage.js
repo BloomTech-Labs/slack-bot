@@ -1,3 +1,15 @@
+/**
+   ProfilePage.js
+   ====================================================
+   CREATED: 2018-05-15
+   UPDATED: 2018-05-15
+   VERSION: 0.2.0
+   TEAM: Jason Campbell, Manisha Lal, Wesley Harvey
+   ABOUT: Profile Page Component
+   NOTES:
+   ----------------------------------------------------
+ */
+
 import React from 'react';
 import { withAuth } from '@okta/okta-react';
 import { SecureRoute, ImplicitCallback } from "@okta/okta-react";
@@ -13,7 +25,7 @@ export default withAuth(class ProfilePage extends React.Component {
 
   async getCurrentUser(){
     this.props.auth.getUser()
-      .then(user => this.setState({user}));
+	.then(user => this.setState({user}));
   }
 
   componentDidMount(){
@@ -22,14 +34,16 @@ export default withAuth(class ProfilePage extends React.Component {
 
   render() {
     if(!this.state.user) return null;
-    return <section className="user-profile">
-        <h1>User Profile</h1>
-        <div>
+    return (
+      <section className="user-profile">
+	<h1>User Profile</h1>
+	<div>
           <label>Name:</label>
           <span>{this.state.user.name}</span>
           <SecureRoute path="/profile/conversations" component={Conversations} />
           <SecureRoute path="/profile/conversations/conversationlist" component={ConversationList} />
-        </div>
-      </section>;
+	</div>
+      </section>
+    );
   }
 });

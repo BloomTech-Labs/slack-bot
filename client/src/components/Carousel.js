@@ -9,6 +9,7 @@ class HomePageCarousel extends Component {
     return (
     <div >
       <h2>This is an important step for SlackBot Kind</h2>
+      <div></div>
       <Carousel>
         <Carousel.Item>
           <img width='100%' height={500} alt="900x500" src={testPic} />

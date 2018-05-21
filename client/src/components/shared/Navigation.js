@@ -1,3 +1,16 @@
+/**
+   Navigation.js
+   ====================================================
+   CREATED: 2018-05-15
+   UPDATED: 2018-05-15
+   VERSION: 0.2.0
+   TEAM: Jason Campbell, Manisha Lal, Wesley Harvey
+   ABOUT: Navigation Component to be shared across all
+          components
+   NOTES: 
+   ----------------------------------------------------
+ */
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
