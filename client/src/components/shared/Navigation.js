@@ -13,7 +13,11 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { LinkContainer } from 'react-router-bootstrap';
 import { withAuth } from '@okta/okta-react';
+import { Nav, Navbar, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import '../Navigation.css';
+import logo from '../img/logotest.jpg';
 
 export default withAuth(class Navigation extends React.Component {
   constructor(props) {
@@ -62,12 +66,36 @@ export default withAuth(class Navigation extends React.Component {
       </li>
     </ul>;
     return (
-      <nav>
-        <ul>
-          <li><Link to="/">Home</Link></li>
+      
+      <Navbar inverse collapseOnSelect className="navbar">
+        <Navbar.Header>
+        
+          <Navbar.Brand className="navbar-custom-color">
+            {/* <Nav> */}
+            {/* <LinkContainer to={'/'}>
+              <img src={logo} height='100%' width='100%' alt='logo' />
+            </LinkContainer> */}
+            <a href={'/'}>Slack Bot</a>
+
+          </Navbar.Brand>
+          <Navbar.Toggle />
+        </Navbar.Header>
+        <Navbar.Collapse>
+          <Nav pullRight>  
+          <NavDropdown title="Navigate" id="basic-nav-dropdown">
+          
+            <MenuItem to={'/'}>Home
+            </MenuItem>
+          
+          
           {authNav}
-        </ul>
-      </nav>
+
+          {/* <li><Link to="/">Home</Link></li> */}
+          </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+        
+      </Navbar>
     )
   }
 });
