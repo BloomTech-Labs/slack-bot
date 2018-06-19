@@ -46,10 +46,10 @@ export default withAuth(class Navigation extends React.Component {
           Logout
         </a>
       </li>
-      {/* <li>
+      <li>
         <Link to="/profile">Profile</Link>
       </li>
-      <li>
+      {/* <li>
         <Link to="/profile/conversations">Conversations</Link>
       </li>
       <li>
