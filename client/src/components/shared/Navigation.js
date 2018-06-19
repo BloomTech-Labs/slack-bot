@@ -42,7 +42,7 @@ export default withAuth(class Navigation extends React.Component {
           Logout
         </a>
       </li>
-      <li>
+      {/* <li>
         <Link to="/profile">Profile</Link>
       </li>
       <li>
@@ -50,7 +50,7 @@ export default withAuth(class Navigation extends React.Component {
       </li>
       <li>
         <Link to="/profile/conversations/conversationlist">Conversationlist</Link>
-      </li>
+      </li> */}
     </ul> : <ul className="auth-nav">
       <li>
         <a href="javascript:void(0)" onClick={this.props.auth.login}>
