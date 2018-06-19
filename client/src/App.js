@@ -19,7 +19,9 @@ import RegistrationForm from './components/auth/RegistrationForm';
 import config from './client.config';
 import LoginPage from './components/auth/LoginPage';
 import ProfilePage from './components/auth/ProfilePage';
+import Billing from "./components/Billing";
 import './App.css';
+
 
 export default class App extends Component {
   render() {
@@ -31,6 +33,7 @@ export default class App extends Component {
           <Route path="/login" render={() => <LoginPage baseUrl={config.url} />} />
           <Route path="/implicit/callback" component={ImplicitCallback} />
           <Route path="/register" component={RegistrationForm} />
+          <Route path="/billing" component={Billing} />
           <SecureRoute path="/profile" component={ProfilePage} />
         </main>
       </div>
