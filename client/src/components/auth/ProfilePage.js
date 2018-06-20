@@ -14,7 +14,7 @@ import React from "react";
 import { withAuth } from "@okta/okta-react";
 import { SecureRoute, ImplicitCallback } from "@okta/okta-react";
 import Conversations from "../Conversations";
-import ConversationList from "../ConversationList";
+import CreateConversation from "../CreateConversation";
 import SideBar from "../home/SideBar";
 import { Switch, Route } from "react-router-dom";
 import Preferences from "../Preferences";
@@ -44,6 +44,7 @@ export default withAuth(
           </div>
           <div className="Data">
             <Switch>
+              <Route path="/profile/createconversation" component={CreateConversation} />
               <Route path="/profile/conversations" component={Conversations} />
               <Route path="/profile/preferences" component={Preferences} />
               <Route path="/profile/billing" component={Billing} />
