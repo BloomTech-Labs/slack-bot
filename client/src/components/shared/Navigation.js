@@ -16,7 +16,7 @@ import { Link } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
 import { withAuth } from '@okta/okta-react';
 import { Nav, Navbar, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
-import '../Navigation.css';
+// import '../Navigation.css';
 import logo from '../img/logotest.jpg';
 
 export default withAuth(class Navigation extends React.Component {
